@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #EF4444;
+  --color-brand-light: #FEE2E2;
+  --color-brand-dark: #991B1B;
+  --color-bg-main: #F8FAFC;
+  --color-slate-border: #E2E8F0;
+  --color-slate-text: #1E293B;
+  --color-slate-muted: #64748B;
+  
+  --radius-xl: 16px;
+  --radius-lg: 12px;
+  
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-main text-slate-text;
+  }
+}
+
+@layer components {
+  .vibrant-card {
+    @apply bg-white rounded-xl border border-slate-border p-5 shadow-card;
+  }
+  
+  .vibrant-btn {
+    @apply px-6 py-3 rounded-lg font-semibold cursor-pointer transition-opacity flex items-center gap-2;
+  }
+  
+  .vibrant-btn-primary {
+    @apply bg-brand text-white hover:opacity-90 active:scale-95;
+  }
+  
+  .vibrant-btn-secondary {
+    @apply bg-brand-light text-brand hover:opacity-90 active:scale-95;
+  }
+}
